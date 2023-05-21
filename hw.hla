@@ -1,0 +1,15 @@
+program HelloWorld; //This is a comment
+
+#include( "stdlib.hhf" )
+
+begin HelloWorld;
+
+	stdout.put( "Hello, World of Assembly Language", nl );
+	stdout.put( "Easier than moving values to general-purpose registers", nl );
+	mov( 15, eax );
+	stdout.put( eax, nl );
+	
+
+
+
+end HelloWorld;
