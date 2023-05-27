@@ -1,0 +1,24 @@
+program first_program; //This is a comment
+
+#include( "stdlib.hhf" )
+
+static
+	first_num: int8;
+	second_num: int8;
+
+begin first_program;
+	stdout.put( "Type the first num.", nl );
+	stdin.get( first_num );
+	stdout.put( first_num, nl );
+
+	stdout.put( "Type the second num.", nl );
+	stdin.get( second_num );
+	stdout.put( second_num, nl );
+
+	//add( , second_num );
+	stdout.put(first_num);
+	stdout.put(second_num);
+
+		
+
+end first_program;
