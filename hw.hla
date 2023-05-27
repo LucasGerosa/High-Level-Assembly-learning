@@ -1,15 +1,27 @@
-program HelloWorld; //This is a comment
+// Case neutral: you can use upper or lower case letters, but you can't have 2 identifiers differ only by case.
+program HelloWorld; //HelloWorld is the program identifier, which specifies the name of the program.
+//Declarations section for declaring, types, variables, procedures, and other objects.
+#include( "stdlib.hhf" ) //The include directive inserts several declarations at this point in the program.
+//stdlib.hhf contains stdout.put, nl, and other useful functions.
 
-#include( "stdlib.hhf" )
+static //static declaration section
+	num1: int8 := 25; //num1 is a variable identifier, which specifies the name of the variable.
+	num2: int16 := 2;
+	num3: int32 := 3;
+	usernum: int64; //variable not initialized
+	true_or_false: boolean := false; //boolean are byte objects
+	letterA: char := 'A'; //char are byte objects
 
 begin HelloWorld;
+	// Statements section for putting the executable statements for your main program.
 
-	stdout.put( "Hello, World of Assembly Language", nl );
+	stdout.put( "Hello, World of Assembly Language. " );
 	stdout.put( "Easier than moving values to general-purpose registers", nl );
-	mov( 15, eax );
-	stdout.put( eax, nl );
-	
-
-
+	mov( 99999999, eax );
+	stdout.put( "Value of eax: ", eax, nl );
+	stdout.put( "Value of num1: ", num1, nl );
+	stdin.get( usernum );
+	stdout.put( "The value you typed: ", usernum, nl );
+	stdout.put( "Value of true_or_false: ", true_or_false, nl );
 
 end HelloWorld;
